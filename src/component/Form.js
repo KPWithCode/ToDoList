@@ -21,15 +21,16 @@ export default function Form() {
         setTodos(todos.filter((todo) => todo.id !== id))
     }
     return (
-        <div>
-            <h1>Simple Todo</h1>
+        <div style={{height:'100vh',width:'100vw', backgroundColor:'#3e696e',textAlign:'center',margin:'0'}}>
+            <h1 style={{fontSize:'3em'}} >Simple Todo</h1>
             <form onSubmit={handleNewTodo}>
-                <input placeholder="To Do"
+                <input placeholder="Add a todo..."
                     onChange={handleToDoChange}
                 />
                 <ul>
                     {todos.map((todo) => (
-                        <li key={todo.id}>
+                        <li style={{  fontSize:'2em',color:''}}
+                        key={todo.id}>
                             {todo.text}
                             <a href="# " onClick={() => removeTodo(todo.id)}>X</a >
                         </li>
