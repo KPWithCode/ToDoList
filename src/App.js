@@ -8,7 +8,7 @@ function App() {
     return (
       <Router>
         <> 
-          <div>
+          <div className="wholePage">
             <Route exact path="/" component={Form} />
           </div>
         </>
